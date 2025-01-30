@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "author": "ABHISHEK SINGH",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": 37.29,
+        "left": -110.06,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn2",
+        "top": 105.61,
+        "left": -105.12,
+        "attrs": { "color": "green" }
+      },
+      { "type": "wokwi-servo", "id": "servo1", "top": 38.67, "left": 120.27, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+      [ "servo1:GND", "esp:GND.1", "black", [ "h-10.1", "v63" ] ],
+      [ "esp:D21", "servo1:PWM", "blue", [ "h12.87", "v48.77" ] ],
+      [ "btn2:1.r", "esp:GND.2", "magenta", [ "v-0.21", "h26.68", "v30.68" ] ],
+      [ "btn1:2.l", "btn2:1.l", "green", [ "h0" ] ],
+      [ "esp:VN", "servo1:V+", "red", [ "h-28.14", "v-43.07", "h149.36", "v15.74" ] ],
+      [ "btn1:1.r", "esp:D18", "purple", [ "v0" ] ],
+      [ "btn2:2.r", "esp:D5", "cyan", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
