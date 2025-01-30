@@ -36,7 +36,7 @@ git clone https://github.com/Levantosina/ESP32-MQTT-Servo-Control.git
 - ESP32Servo.h (to control the servo motor)
 4. Open the Project in Wokwi
 - Install Wokwi Extension in Visual Studio Code. (https://docs.wokwi.com/vscode/getting-started)
-- 
+ 
 5. Upload and Run the Code
 
 
